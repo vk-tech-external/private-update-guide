@@ -1,0 +1,20 @@
+{
+  "title": "Версия 4.1",
+  "shortDescription": "",
+  "metaDescription": "",
+  "sectionTitle": "Руководство по обновлению",
+  "icon": "",
+  "weight": 4,
+  "documentPath": "http://cloud_platform_4.1.hb.bizmrg.com/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E%20Private%20Cloud%20v.4.1.pdf",
+  "variables": {
+    "company": "ООО «ВК ЦИФРОВЫЕ ТЕХНОЛОГИИ»",
+    "system": "Private Cloud",
+    "sys": "Private Cloud",
+    "sys1": "Платформа",
+    "sys2": "Платформы",
+    "sys3": "Платформе",
+    "sys4": "Платформу",
+    "sys5": "Платформой",
+    "sys6": "Платформе"
+  }
+}
