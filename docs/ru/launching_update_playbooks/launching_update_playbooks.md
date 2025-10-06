@@ -19,14 +19,14 @@ $ cp -r $NEW_DISTRIB_DIR/repos_mcs_distr_box-$NEW_RELEASE_NAME/ansible-openstack
    {caption(Команда при обновлении с версии 4.1.1)[align=left;position=above]}
    ```console
    $ cd ~/inventory-$NEW_RELEASE_NAME/vkcloud
-   $ cp ../tools/box.sh.d/groups/upgrade-4.1.1-4.2.2-full ../tools/box.sh.d/groups/upgrade
+   $ cp ../tools/box.sh.d/groups/upgrade-4.1.1-4.2.1-full ../tools/box.sh.d/groups/upgrade
    ```
    {/caption}
 
    {caption(Команда при обновлении с версии 4.2.0)[align=left;position=above]}
    ```console
    $ cd ~/inventory-$NEW_RELEASE_NAME/vkcloud
-   $ cp ../tools/box.sh.d/groups/upgrade-4.2.0-4.2.2-full ../tools/box.sh.d/groups/upgrade
+   $ cp ../tools/box.sh.d/groups/upgrade-4.2.0-4.2.1-full ../tools/box.sh.d/groups/upgrade
    ```
    {/caption}
 
@@ -99,7 +99,7 @@ $ ../ansible-openstack/tools/box.sh deploy -b ../ansible-openstack -i vkcloud.ym
 Чтобы выполнить полную установку, запустите плейбук:
 
 ```console
-$ ../ansible-openstack/tools/box.sh deploy -b ../ansible-openstack -i vkcloud.yml -e distro_deploy=true -e env=vkcloud 
+$ ../ansible-openstack/tools/box.sh deploy -b ../ansible-openstack -i vkcloud.yml -e distro_deploy=true -e env=vkcloud
 ```
 
 Если есть файлы с дополнительными переменными, добавьте их при запуске обновления, например:
@@ -123,7 +123,7 @@ Failed to update host cpn001: ('Error -32602: Invalid params., ...
 ```
 {/caption}
 
-**Решение**: 
+**Решение**:
 
 1. Отключите шаблон **Apache Kafka by JMX** от узла:
 
@@ -132,7 +132,7 @@ Failed to update host cpn001: ('Error -32602: Invalid params., ...
    1. Нажмите на имя узла, на котором возникла ошибка.
    1. Перейдите на вкладку **Templates**.
    1. Напротив шаблона **Apache Kafka by JMX** нажмите **Unlink and clear**.
-   
+
 1. В очереди обновлений переместите запуск плейбука `zabbix_configure_resources.yml` в конец списка:
 
    ```console
@@ -212,7 +212,7 @@ non-zero return code
    ```console
    cpnX$ sudo docker exec rabbit_persistent rabbitmqctl cluster_status --formatter json | jq '.running_nodes'
    ```
-   
+
    Вывод команды должен содержать все узлы кластера.
 
 Продолжите обновление с момента появления ошибки, перезапустив команды с ключом `--skip-to`:

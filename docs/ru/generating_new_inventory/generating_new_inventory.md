@@ -10,7 +10,7 @@
    $ cd $NEW_DISTRIB_DIR
    $ tar xvf invgen_box-${NEW_RELEASE_NAME}.tar.gz
    ```
-  
+
 1. Сгенерируйте новый файл минимальной конфигурации:
 
    ```console
@@ -249,10 +249,10 @@ $ ansible-vault decrypt $PREV_INVENTORY_DIR/vkcloud/group_vars/vkcloud/vault.yml
 ```
 
 Перенесите пароли в новый Inventory с помощью скрипта `vault_migration.py`:
-
+<!--- //todo На данный момент необходимо зафиксировать версию 4.2.1 так как поправить в релизе невозможно. -->
 ```console
 $ cd $NEW_DISTRIB_DIR/repos_mcs_distr_box-$NEW_RELEASE_NAME/upgrade/minimal_yml
-$ ./vault_migration.py --source $PREV_INVENTORY_DIR/vkcloud/group_vars/vkcloud/vault.yml --target ~/inventory-$NEW_RELEASE_NAME/vkcloud/group_vars/vkcloud/vault.yml --release 4.2.2
+$ ./vault_migration.py --source $PREV_INVENTORY_DIR/vkcloud/group_vars/vkcloud/vault.yml --target ~/inventory-$NEW_RELEASE_NAME/vkcloud/group_vars/vkcloud/vault.yml --release 4.2.1
 ```
 
 {note:err}
